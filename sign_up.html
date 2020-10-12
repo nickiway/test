@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .main{
+            width:100%;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width:150px;
+        }
+        .main__item{
+            border:2px solid lime;
+            border-radius: 20px;
+            padding:30px;
+            max-width: 375px;
+            box-shadow: 0px 0px 20px greenyellow inset;
+        }
+        .container>label{
+            font-weight: bold;
+        }
+        form>div{
+            display: flex;
+            margin: 20px auto;
+        }
+        a{
+            text-transform: none;
+            color:red;
+            text-decoration: none;
+        }
+        input{
+            height:25px;
+            border-radius: 10px;
+            border:1px solid green;
+        }
+        input[type ="range"]:focus{
+            box-shadow: none;
+        }
+        input[type ="radio"]:focus{
+            box-shadow: none;
+        }
+        input[type ="radio"]{
+            box-shadow: none;
+            margin:auto 20px;
+        }
+        input[type ="submit"]{
+            background-color: lime;
+            min-width: 150px;
+            height:40px;
+            cursor: pointer;
+            transition: .5s;    
+            color:#fff;
+            text-shadow: 0px 0px 3px #000;
+        }
+        input[type ="submit"]:hover{
+        background-color: #fff;
+        color:darkgreen;
+        text-shadow: none;
+        transition: .5s;
+        }
+        input:focus{
+            box-shadow: 0px 0px 4px lime ;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay="autoplay" controls="controls">     
+        <source src="ms.ogg" />     
+        <source src="ms.mp3" />   
+    </audio> 
+<div class="main">
+    <div class="main__item">
+        <div class="main__form">
+            <form   oninput="level.value = flevel.valueAsNumber" id = "signup"action="sign_up.html" method="post">
+                <div><div  class = "container"><label for="name">Имя</label></div><input autofocus minlength="2" maxlength="72" required autocomplete="off" placeholder="Имя" id = "name" name = "name" type="text"></div>
+                <div><div class = "container"><label for="surname">Фамилия</label></div><input required autocomplete="off" minlength="2" maxlength="72" placeholder="Фамилия" type="text" name = "surname" id= "surname"></div>
+                <div><div class = "container"><label for="city">Город</label></div>
+                    <select style ="width:165px;min-height: 30px; border-radius: 10px;" name = "city" id = "city">
+                        <option value="Днепр">Днепр</option>
+                        <option value="Киев">Киев</option>
+                        <option value="Одесса">Одесса</option>
+                        <option value="Львов">Львов</option>
+                    </select>
+                </div>
+                <div><div class = "container"><label for="email">Почта</label></div><input required autocomplete="off"placeholder="Почта" type="email" name = "email" id = "email"></div>
+                <div><div class = "container"><label for="pass">Введите пароль</label></div><input required autocomplete="off"placeholder="Пароль" type="password" name = "pass" id = "pass"></div>
+                <div><div class = "container"><label for="reapeat">Повтрите пароль</label></div><input required autocomplete="off"placeholder="Введите пароль еще раз" type="password" name = "reapeat" id ="reapeat"></div>
+                <div><div class = "container"><label for="myImage">Введите лого</label></div><input  style = "border:none;border-radius: 0;"type="file" name="myImage" id = "myImage" accept="image/x-png,image/gif,image/jpeg"></div>
+                <div><div class = "container"><label for="sex">Пол</label></div><label for=""></label>M<input type="radio" value = "man"name="sex" id = "sex">Ж<input type="radio" value = "girl"name="sex" id = "sex"></div>
+                <div><div class = "container"><label for="range">Введите суму</label></div><input name="flevel" id="flying" type="range" min="10" max="300" value="20" step="10">
+                <output for="flying" name="level">20</output></div>
+                <div><textarea name="textarea" id="textarea" cols="40" rows="5" readonly disabled>Я соглашаюсь со всем,с чем можно и не можно согласиться!</textarea></div>
+                <p>Введите число с картинки</p>
+                <div style ="display: flex;align-items: center;"><div class = "container"><label for="photo"><img src="https://intsystem.org/wp-content/uploads/2013/08/kcaptcha_1_2.png"  width = 150px alt=""></label></div><input type="text" required autocomplete="off"name = "photo" id= "photo"></div>
+                <div><p style=  "width:100%;text-align: center; ">Вы уже зарегестрированы? <a href="sign_in.html">Заходите.</a></p></div>
+            </form>
+            <p style= "width:100%;display: flex;justify-content: center;"><input form = "signup" type="submit" value="Зарегестрироваться"></p>
+        </div>
+    </div>
+    <form>
+        
+        </form>
+        
+</div>
+</body>
+</html>
